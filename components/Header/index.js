@@ -24,9 +24,9 @@ function Header() {
     // this shows it on the HTML page 
     const itsAlive = document.createElement(".header-container"); 
     itsAlive.appendChild(parent); 
-    date.textContent = Header.date;
-    title.textContent = Header.title; 
-    temperature.textContent = Header.temperature; 
+    date.textContent = "SMARCH 28, 2019"
+    title.textContent = "Lambda Times"
+    temperature.textContent = "98°"
 
     console.log(parent)
 
