@@ -27,3 +27,19 @@ axios.get("https://lambda-times-backend.herokuapp.com/articles")
     console.log("These is an error", error)
 }); 
 
+function articleCards() {
+    const card = document.createElement("div"); 
+    const handline = document.createElement("h1"); 
+    const auther = document.createElement("p"); 
+    const imgContainer = document.createElement("div");
+    const img = document.createElement("img"); 
+    const byAuther = document.createElement("span"); 
+
+    card.classList.add(".cars-container"); 
+    handline.classList.add(".headline"); 
+    auther.classList.add(".auther"); 
+    imgContainer.classList.add(".img-container"); 
+
+    
+    
+}
