@@ -21,6 +21,14 @@ function Header() {
     parent.appendChild(title); 
     parent.appendChild(temperature); 
 
-    console.log(Header)
+    // this shows it on the HTML page 
+    const itsAlive = document.createElement(".header-container"); 
+    itsAlive.appendChild(parent); 
+    date.textContent = Header.date;
+    title.textContent = Header.title; 
+    temperature.textContent = Header.temperature; 
 
+    console.log(parent)
+
+    return parent 
 }
