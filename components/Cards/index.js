@@ -20,14 +20,23 @@
 
 
 axios.get("https://lambda-times-backend.herokuapp.com/articles")
-.then(data => {
-    console.log("These are Articles", data)
+.then(config => {
+    console.log("These are Articles", config.data.articles)
+    const work = config.data.articles
+    const play = Object.entries(work) 
+    console.log("does it work?", play)
+    play.forEach(element => {
+        const great = document.querySelector(".cards-container")
+        great.appendChild(articleCards(config))
+        
+    });
 })
 .catch(error => {
     console.log("These is an error", error)
-}); 
+})
 
-function articleCards() {
+
+function articleCards(apply) {
     const card = document.createElement("div"); 
     const handline = document.createElement("h1"); 
     const auther = document.createElement("p"); 
@@ -35,11 +44,21 @@ function articleCards() {
     const img = document.createElement("img"); 
     const byAuther = document.createElement("span"); 
 
-    card.classList.add(".cars-container"); 
-    handline.classList.add(".headline"); 
-    auther.classList.add(".auther"); 
-    imgContainer.classList.add(".img-container"); 
+    card.classList.add("cars-container"); 
+    handline.classList.add("headline"); 
+    auther.classList.add("auther"); 
+    imgContainer.classList.add("img-container"); 
 
+    card.appendChild(headline); 
+    card.appendChild(auther); 
+    card.appendChild(imgContainer); 
+    imgContainer.appendChild(img); 
+    card.appendChild(byAuther); 
+
+    const work = document.querySelector(".card-container")
+    work.appendChild(card)
+    headline.textContent = `${apply.javascript}`
+    
     
     
 }
