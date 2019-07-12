@@ -9,4 +9,18 @@
 //  </div >
 // And add it to the DOM in the .headerContainer component
 
-function Header() {}
+function Header() {
+    const parent = document.createElement("div"); 
+    const date = document.createElement("span"); 
+    const title = document.createElement("h1"); 
+    const temperature = document.createElement("span"); 
+
+    parent.classList.add(".header"); 
+    
+    parent.appendChild(date); 
+    parent.appendChild(title); 
+    parent.appendChild(temperature); 
+
+    console.log(Header)
+
+}
